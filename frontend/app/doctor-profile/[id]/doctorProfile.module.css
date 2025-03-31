@@ -8,16 +8,6 @@
     padding-left: 10px;
     padding-right: 10px;
 }
-
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    padding: 10px 20px;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
 .backButton {
     background: none;
     border: none;
@@ -29,6 +19,16 @@
     align-items: center;
     gap: 5px;
 }
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
 
 .backButton:hover {
     color: #163D20;
