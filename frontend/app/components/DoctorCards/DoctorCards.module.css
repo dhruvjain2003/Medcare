@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+.card {
+    width: 275px;
+    line-height: 1.5;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    background:  #F8FCF9;
+    border: 1px solid #0000001f;
+}
+
+.profileImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.name {
+    margin: 12px 0;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    font-size: 12px;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.icon {
+    width: 14px;
+    height: 14px;
+}
+
+.ratings {
+    margin: 40px auto;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.star {
+    color: #f39c12;
+    width: 16px;
+    height: 16px;
+}
+
+.bookButton {
+    width: 100%;
+    padding: 24px 30px;
+    margin-top: 10px;
+    background: transparent;
+    border: 1px solid #00000021;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.bookButton:hover {
+    background-color: #2e7d32;
+    color: white;
+}   
+
+@media (max-width:1180px) {
+    .card{
+        width: 45%;
+    }
+}
+
+@media (max-width:768px) {
+    .card{
+        width: 100%;
+    }
+}

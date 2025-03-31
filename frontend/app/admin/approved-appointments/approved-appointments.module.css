@@ -1,0 +1,134 @@
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 77vh;
+}
+
+.heading {
+    font-size: 2.5rem;
+    color: #1e293b;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #3b82f6;
+    border-radius: 2px;
+}
+
+.appointmentsList {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.appointmentCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.appointmentCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.appointmentInfo {
+    flex: 1;
+}
+
+.patientName {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.doctorName {
+    color: #475569;
+    margin-bottom: 0.5rem;
+}
+
+.date, .time {
+    color: #64748b;
+    margin-bottom: 0.25rem;
+}
+
+.type {
+    color: #3b82f6;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.completeButton {
+    background-color: #1C4A2A;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+
+.completeButton:hover {
+    background-color: #15391f;
+    transform: translateY(-1px);
+}
+
+.completeButton:active {
+    transform: translateY(0);
+}
+
+.noAppointments {
+    text-align: center;
+    color: #64748b;
+    font-size: 1.1rem;
+    padding: 3rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh; 
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #065f46; 
+    border-radius: 50%;
+    width: 20vh;
+    height: 20vh;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes loading {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/images/login-bg.png');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.loginBox {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.073);
+    border-radius: 16px;
+    width: 560px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    text-align: center;
+    padding: 30px 24px;
+    color: rgba(14, 37, 21, 1);
+}
+
+.heading {
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 32px;
+    color: rgba(14, 37, 21, 1);
+}
+
+.text {
+    font-size: 16px;
+    color: rgba(140, 140, 140, 1);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.signupLink {
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(28, 74, 42, 1);
+    text-decoration: none;
+}
+
+.signupLink:hover {
+    text-decoration: underline;
+}
+
+.inputGroup {
+    width: 100%;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.inputLabel {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #8C8C8C;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.inputField {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    padding-left: 35px;
+    background: transparent;
+}
+
+.inputField::placeholder {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 10px;
+}
+
+.eyeIcon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.loginBtn {
+    width: 100%;
+    padding: 16px 48px;
+    background: #1C4A2A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    opacity: 1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.loginBtn:hover {
+    background: #003300;
+}
+
+.resetBtn {
+    width: 100%;
+    padding: 16px 48px;
+    background: #C6B09A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.resetBtn:hover {
+    background: #888;
+}
+
+.forgotPassword {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.forgotPassword a {
+    text-decoration: none;
+    color: #0E2515;
+}
+
+.forgotPassword a:hover {
+    text-decoration: underline;
+}
+
+.errorText {
+    font-size: 12px;
+    color: #d9534f;
+    margin-top: 5px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.divider span {
+    padding: 0 10px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.googleBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: white;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 20px;
+}
+
+.googleBtn:hover {
+    background-color: #f9fafb;
+}
+
+.googleBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.googleIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .loginBox {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 25px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .loginBox {
+        width: 95%;
+        padding: 20px 15px;
+        margin: 15px auto;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .loginBtn,
+    .resetBtn {
+        font-size: 14px;
+        padding: 14px 40px;
+    }
+}

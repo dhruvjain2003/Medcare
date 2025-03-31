@@ -1,0 +1,102 @@
+.dateButton {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #f5f5f5;
+}
+
+.activeDate {
+    background-color: #1f5221;
+    color: white;
+}
+
+
+.dateButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 2px;
+    padding: 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.dateButton:hover {
+    transform: scale(1.1);
+}
+
+
+.dateSelectorWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.dateSelector {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    white-space: nowrap;
+    /* max-width: calc(7 * 75px); */
+}
+
+.dateSelector::-webkit-scrollbar {
+    display: none;
+}
+
+.dateSelector .dateButton {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 65px;
+}
+
+.dateSelector .dateButton:hover {
+    background: #ddd;
+}
+
+.dateSelector .activeDate {
+    background: #1f5434;
+    color: white;
+    border: 1px solid #1f5434;
+}
+
+.day {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.date {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.scrollButton {
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    padding: 20px 16px;
+
+}
+
+
+@media (min-width: 992px) {
+    .dateSelector{
+        max-width: calc(7 * 75px);
+    }
+}

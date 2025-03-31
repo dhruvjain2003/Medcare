@@ -1,0 +1,224 @@
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.01);
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.doctorInfo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 4px solid #4caf50;
+}
+
+.doctorImage {
+    object-fit: cover;
+}
+
+.doctorDetails {
+    flex: 1;
+}
+
+.doctorName {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1a4d3c;
+}
+
+.specialty {
+    color: #388e3c;
+    font-size: 1.1rem;
+}
+
+.experience {
+    color: #4caf50;
+    font-weight: 500;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4caf50;
+    font-size: 1.2rem;
+}
+
+.star {
+    font-size: 1.2rem;
+}
+
+.gender {
+    color: #66bb6a;
+    font-weight: 500;
+}
+
+.errorCard {
+    background: #fdf3f3;
+    border: 1px solid #ef9a9a;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    color: #d32f2f;
+    text-align: center;
+}
+
+.cardTitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2e7d32;
+    border-bottom: 2px solid #a5d6a7;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.detail {
+    color: #3e4a3e;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.detail:before {
+    content: "•";
+    color: #4caf50;
+}
+
+.textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #a5d6a7;
+    border-radius: 12px;
+    resize: vertical;
+    min-height: 120px;
+    font-size: 1rem;
+    color: #1a4d3c;
+    background-color: #f8faf9;
+    transition: border-color 0.3s ease;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.textarea::placeholder {
+    color: #90a4ae;
+}
+
+.button {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button:hover:not(:disabled) {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+}
+
+.button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.buttonDisabled {
+    background-color: #c8e6c9;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .doctorInfo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imageWrapper {
+        margin-bottom: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .doctorName {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out;
+}
