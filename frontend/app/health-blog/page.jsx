@@ -1,38 +1,14 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import styles from "./healthBlog.module.css";
 
-const HealthBlog = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [loading, setLoading] = useState(true);
+async function fetchBlogs() {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blogs`, {
+    cache: "force-cache", 
+  });
+  return response.json();
+}
 
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blogs`
-        );
-        const data = await response.json();
-        console.log(data);
-        setBlogs(data);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-        setLoading(false);
-      }
-    };
-
-    fetchBlogs();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className={styles.loader}>
-        <div className={styles.loaderCircle}></div>
-      </div>
-    );
-  }
+export default async function HealthBlog() {
+  const blogs = await fetchBlogs(); 
 
   return (
     <div className={styles.container}>
@@ -42,11 +18,7 @@ const HealthBlog = () => {
           <div key={blog.id} className={styles.blogCard}>
             {blog.image && (
               <div className={styles.imageContainer}>
-                <img
-                  src={blog.image}
-                  alt={blog.title}
-                  className={styles.blogImage}
-                />
+                <img src={blog.image} alt={blog.title} className={styles.blogImage} />
               </div>
             )}
             <h2 className={styles.title}>{blog.title}</h2>
@@ -58,6 +30,4 @@ const HealthBlog = () => {
       </div>
     </div>
   );
-};
-
-export default HealthBlog;
+}
