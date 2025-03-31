@@ -15,15 +15,6 @@ function Login() {
   const { login,user } = useAuth();
   const router = useRouter();
 
-  // useEffect(() => {
-  //   const urlParams = new URLSearchParams(window.location.search);
-  //   const token = urlParams.get("token");
-  //   if (token) {
-  //     login(token);
-  //     router.push("/?message=success");
-  //   }
-  // }, []);
-
   useEffect(() => {
     if (user) {
       router.push(user.role === "admin" ? "/admin" : "/");
